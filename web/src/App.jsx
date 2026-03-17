@@ -18,6 +18,7 @@ const STATUS_LABELS = {
   needs_repair: 'Needs Repair',
   consumed: 'Consumed',
   lost: 'Lost',
+  expired: 'Expired',
 }
 const STATUS_CLASS = {
   reserved: 'status-reserved',
@@ -26,6 +27,7 @@ const STATUS_CLASS = {
   needs_repair: 'status-needs_repair',
   consumed: 'status-consumed',
   lost: 'status-lost',
+  expired: 'status-expired',
 }
 const TAB_ITEMS = [
   { id: 'dashboard', label: 'Dashboard', icon: 'dashboard' },
@@ -57,9 +59,9 @@ const defaultState = {
   schemaVersion: 2,
   lastUpdatedAt: new Date().toISOString(),
   gear: [
-    { id: crypto.randomUUID(), brand: 'MSR', name: 'PocketRocket 2', category: 'Cooking', weight: 0.16, quantity: 1, notes: '' },
-    { id: crypto.randomUUID(), brand: 'Sawyer', name: 'Squeeze Filter', category: 'Water', weight: 0.22, quantity: 2, notes: '' },
-    { id: crypto.randomUUID(), brand: 'Adventure Medical', name: 'First Aid Kit', category: 'Safety', weight: 0.5, quantity: 1, notes: 'Keep meds current' },
+    { id: crypto.randomUUID(), brand: 'MSR', name: 'PocketRocket 2', category: 'Cooking', weight: 0.16, quantity: 1, notes: '', expirationDate: '' },
+    { id: crypto.randomUUID(), brand: 'Sawyer', name: 'Squeeze Filter', category: 'Water', weight: 0.22, quantity: 2, notes: '', expirationDate: '' },
+    { id: crypto.randomUUID(), brand: 'Adventure Medical', name: 'First Aid Kit', category: 'Safety', weight: 0.5, quantity: 1, notes: 'Keep meds current', expirationDate: '' },
   ],
   categories: STARTER_CATEGORIES,
   packTemplates: DEFAULT_PACK_TEMPLATES,
@@ -107,6 +109,7 @@ function normalizeState(raw) {
     category: item.category || 'Other',
     weight: Number(item.weight) || 0,
     quantity: Number(item.quantity) || 1,
+    expirationDate: normalizeExpirationDate(item.expirationDate),
     notes: item.notes || '',
   }))
   const fallbackCategories = Array.from(new Set([
@@ -203,11 +206,29 @@ function parseCsvLine(line) {
   return cells
 }
 
+function toLocalDateStamp(date = new Date()) {
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  return `${year}-${month}-${day}`
+}
+
+function normalizeExpirationDate(value) {
+  const text = String(value || '').trim()
+  return /^\d{4}-\d{2}-\d{2}$/.test(text) ? text : ''
+}
+
+function isExpiredDate(expirationDate, todayStamp = toLocalDateStamp()) {
+  const normalized = normalizeExpirationDate(expirationDate)
+  if (!normalized) return false
+  return normalized < todayStamp
+}
+
 function App() {
   const [appState, setAppState] = useState(loadState)
   const [tab, setTab] = useState('dashboard')
   const [selectedTripId, setSelectedTripId] = useState(appState.trips[0]?.id || null)
-  const [gearForm, setGearForm] = useState({ brand: '', name: '', category: 'Shelter', weight: '', quantity: '1', notes: '' })
+  const [gearForm, setGearForm] = useState({ brand: '', name: '', category: 'Shelter', weight: '', quantity: '1', expirationDate: '', notes: '' })
   const [tripForm, setTripForm] = useState({ name: '', location: '', startDate: '', endDate: '' })
   const [tripTemplateSelections, setTripTemplateSelections] = useState([])
   const [showTripBagEditor, setShowTripBagEditor] = useState(false)
@@ -290,11 +311,6 @@ function App() {
     [appState.gear],
   )
 
-  const unresolvedAssignments = useMemo(
-    () => appState.trips.flatMap((trip) => trip.assignments.filter((assignment) => ['needs_repair', 'lost', 'consumed'].includes(assignment.status))),
-    [appState.trips],
-  )
-
   const filteredGear = useMemo(() => (
     appState.gear.filter((item) => {
       const matchesCategory = gearFilterCategory === 'all' || item.category === gearFilterCategory
@@ -305,8 +321,17 @@ function App() {
     })
   ), [appState.gear, gearFilterCategory, gearSearch])
 
+  const expiredGearById = useMemo(() => {
+    const todayStamp = toLocalDateStamp()
+    return Object.fromEntries(
+      appState.gear
+        .filter((item) => isExpiredDate(item.expirationDate, todayStamp))
+        .map((item) => [item.id, item]),
+    )
+  }, [appState.gear])
+
   const actionList = useMemo(() => {
-    return appState.trips.flatMap((trip) => (
+    const statusActions = appState.trips.flatMap((trip) => (
       trip.assignments
         .filter((assignment) => ['needs_repair', 'lost', 'consumed'].includes(assignment.status))
         .map((assignment) => {
@@ -327,10 +352,25 @@ function App() {
             action,
             status: assignment.status,
             note: assignment.note,
+            isResolvable: true,
           }
         })
     ))
-  }, [appState.trips, gearById])
+    const expiredInventoryActions = Object.values(expiredGearById).map((gear) => ({
+      id: `expired-${gear.id}`,
+      tripId: null,
+      tripName: 'Inventory',
+      bagName: 'N/A',
+      gearLabel: `${gear.brand} ${gear.name}`,
+      category: gear.category || 'Other',
+      quantity: gear.quantity || 1,
+      action: 'Replace (Expired)',
+      status: 'expired',
+      note: `Expired on ${gear.expirationDate}`,
+      isResolvable: false,
+    }))
+    return [...statusActions, ...expiredInventoryActions]
+  }, [appState.trips, gearById, expiredGearById])
 
   const groupedActionList = useMemo(() => {
     const grouped = actionList.reduce((acc, item) => {
@@ -344,16 +384,49 @@ function App() {
 
   const tripActionGroups = useMemo(() => {
     if (!selectedTrip) return []
-    const grouped = selectedTrip.assignments
+    const tripFollowUpItems = selectedTrip.assignments
       .filter((assignment) => ['needs_repair', 'consumed', 'lost'].includes(assignment.status))
-      .reduce((acc, assignment) => {
-        const category = gearById[assignment.gearId]?.category || 'Other'
+      .map((assignment) => {
+        const gear = gearById[assignment.gearId]
+        return {
+          id: assignment.id,
+          assignmentId: assignment.id,
+          status: assignment.status,
+          category: gear?.category || 'Other',
+          gearLabel: gear ? `${gear.brand} ${gear.name}` : 'Unknown Gear',
+          quantity: assignment.quantity,
+          action: assignment.status === 'needs_repair' ? 'Repair' : assignment.status === 'lost' ? 'Replace' : 'Restock',
+          note: assignment.note || '',
+          isResolvable: true,
+        }
+      })
+
+    const expiredTripItems = selectedTrip.assignments
+      .filter((assignment) => Boolean(expiredGearById[assignment.gearId]))
+      .map((assignment) => {
+        const gear = expiredGearById[assignment.gearId]
+        return {
+          id: `${assignment.id}-expired`,
+          assignmentId: assignment.id,
+          status: 'expired',
+          category: gear?.category || 'Other',
+          gearLabel: gear ? `${gear.brand} ${gear.name}` : 'Unknown Gear',
+          quantity: assignment.quantity,
+          action: 'Replace (Expired)',
+          note: `Expired on ${gear?.expirationDate || 'unknown date'}`,
+          isResolvable: false,
+        }
+      })
+
+    const grouped = [...tripFollowUpItems, ...expiredTripItems]
+      .reduce((acc, item) => {
+        const category = item.category || 'Other'
         if (!acc[category]) acc[category] = []
-        acc[category].push(assignment)
+        acc[category].push(item)
         return acc
       }, {})
     return Object.entries(grouped).sort(([a], [b]) => a.localeCompare(b))
-  }, [selectedTrip, gearById])
+  }, [selectedTrip, gearById, expiredGearById])
 
   const assignmentGearGroups = useMemo(() => {
     if (!selectedTrip) return []
@@ -478,10 +551,11 @@ function App() {
       category: gearForm.category.trim() || 'General',
       weight,
       quantity,
+      expirationDate: normalizeExpirationDate(gearForm.expirationDate),
       notes: gearForm.notes.trim(),
     }
     updateState((prev) => ({ ...prev, gear: [...prev.gear, newGear] }))
-    setGearForm({ brand: '', name: '', category: 'Shelter', weight: '', quantity: '1', notes: '' })
+    setGearForm({ brand: '', name: '', category: 'Shelter', weight: '', quantity: '1', expirationDate: '', notes: '' })
   }
 
   const removeGear = (gearId) => {
@@ -919,13 +993,14 @@ function App() {
   }
 
   const exportGearCsv = () => {
-    const header = ['brand', 'name', 'category', 'weight', 'quantity', 'notes']
+    const header = ['brand', 'name', 'category', 'weight', 'quantity', 'expiration_date', 'notes']
     const rows = appState.gear.map((item) => ([
       csvEscape(item.brand),
       csvEscape(item.name),
       csvEscape(item.category),
       csvEscape(item.weight),
       csvEscape(item.quantity),
+      csvEscape(item.expirationDate || ''),
       csvEscape(item.notes || ''),
     ].join(',')))
     const csv = [header.join(','), ...rows].join('\n')
@@ -939,8 +1014,8 @@ function App() {
   }
 
   const downloadGearCsvTemplate = () => {
-    const header = ['brand', 'name', 'category', 'weight', 'quantity', 'notes']
-    const sample = ['Example Brand', 'Example Item', 'Clothing', '1.25', '1', 'Optional note']
+    const header = ['brand', 'name', 'category', 'weight', 'quantity', 'expiration_date', 'notes']
+    const sample = ['Example Brand', 'Example Item', 'Clothing', '1.25', '1', '2026-12-31', 'Optional note']
     const csv = [header.join(','), sample.map((v) => csvEscape(v)).join(',')].join('\n')
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' })
     const url = URL.createObjectURL(blob)
@@ -972,6 +1047,8 @@ function App() {
         category: headerCells.indexOf('category'),
         weight: headerCells.indexOf('weight'),
         quantity: headerCells.indexOf('quantity'),
+        expirationDate: headerCells.indexOf('expiration_date'),
+        expirationLegacy: headerCells.indexOf('expiration'),
         notes: headerCells.indexOf('notes'),
       }
       if (idx.brand < 0 || idx.name < 0 || idx.category < 0 || idx.weight < 0 || idx.quantity < 0) {
@@ -994,6 +1071,10 @@ function App() {
         const category = (cells[idx.category] || 'Other').trim() || 'Other'
         const weight = Number(cells[idx.weight] || 0)
         const quantity = Number(cells[idx.quantity] || 0)
+        const expirationRaw = idx.expirationDate >= 0
+          ? (cells[idx.expirationDate] || '').trim()
+          : (idx.expirationLegacy >= 0 ? (cells[idx.expirationLegacy] || '').trim() : '')
+        const expirationDate = normalizeExpirationDate(expirationRaw)
         const notes = idx.notes >= 0 ? (cells[idx.notes] || '').trim() : ''
 
         if (!brand || !name || weight <= 0 || quantity <= 0) {
@@ -1013,6 +1094,7 @@ function App() {
           category,
           weight,
           quantity,
+          expirationDate,
           notes,
         })
       })
@@ -1028,6 +1110,8 @@ function App() {
       event.target.value = ''
     }
   }
+
+  const needsFollowUpCount = actionList.length
 
   const tripEssentialsReady = (trip) => {
     const essentialItems = trip.assignments.filter((assignment) => assignment.essential)
@@ -1090,7 +1174,7 @@ function App() {
             </article>
             <article className="card stat warning">
               <h2>Needs Follow-up</h2>
-              <strong>{unresolvedAssignments.length}</strong>
+              <strong>{needsFollowUpCount}</strong>
             </article>
             <article className="card stat warning">
               <h2>Conflicts</h2>
@@ -1111,7 +1195,11 @@ function App() {
                       <p>Status: <span className={`status-badge ${STATUS_CLASS[item.status]}`}>{STATUS_LABELS[item.status]}</span></p>
                       {item.note ? <p>Note: {item.note}</p> : null}
                     </div>
-                    <button type="button" className="btn btn-secondary" onClick={() => markAssignmentResolved(item.tripId, item.id)}>Mark Resolved</button>
+                    {item.isResolvable ? (
+                      <button type="button" className="btn btn-secondary" onClick={() => markAssignmentResolved(item.tripId, item.id)}>Mark Resolved</button>
+                    ) : (
+                      <span className={`status-badge ${STATUS_CLASS.expired}`}>Expired</span>
+                    )}
                   </div>
                 ))}
               </div>
@@ -1154,6 +1242,10 @@ function App() {
                 <label>Owned Quantity *</label>
                 <input type="number" min="1" step="1" value={gearForm.quantity} onChange={(e) => setGearForm((p) => ({ ...p, quantity: e.target.value }))} placeholder="1" required />
               </div>
+              <div className="field-block">
+                <label>Expiration Date (optional)</label>
+                <input type="date" value={gearForm.expirationDate} onChange={(e) => setGearForm((p) => ({ ...p, expirationDate: e.target.value }))} />
+              </div>
             </div>
 
             <div className="field-block">
@@ -1165,7 +1257,7 @@ function App() {
               <button
                 type="button"
                 className="btn btn-ghost"
-                onClick={() => setGearForm({ brand: '', name: '', category: allCategories[0] || 'Other', weight: '', quantity: '1', notes: '' })}
+                onClick={() => setGearForm({ brand: '', name: '', category: allCategories[0] || 'Other', weight: '', quantity: '1', expirationDate: '', notes: '' })}
               >
                 Clear
               </button>
@@ -1193,7 +1285,23 @@ function App() {
               <div className="list-item" key={item.id}>
                 <div>
                   <strong>{item.brand} {item.name}</strong>
-                  <p><span className="pill">{item.category}</span> {item.weight} lbs • Owned {item.quantity} • Checked out {checkedOutByGear[item.id] || 0}</p>
+                  <p>
+                    <span className="pill">{item.category}</span>
+                    {' '}
+                    {item.weight}
+                    {' '}
+                    lbs • Owned
+                    {' '}
+                    {item.quantity}
+                    {' '}
+                    • Checked out
+                    {' '}
+                    {checkedOutByGear[item.id] || 0}
+                    {item.expirationDate ? ` • Expires ${item.expirationDate}` : ''}
+                  </p>
+                  {isExpiredDate(item.expirationDate) ? (
+                    <p><span className={`status-badge ${STATUS_CLASS.expired}`}>{STATUS_LABELS.expired}</span></p>
+                  ) : null}
                   {(gearStatusById[item.id] || []).length > 0 ? (
                     <p>
                       {(gearStatusById[item.id] || []).map((status) => (
@@ -1411,6 +1519,11 @@ function App() {
                                   </span>
                                 </small>
                               ) : null}
+                              {isExpiredDate(item.expirationDate) ? (
+                                <small>
+                                  <span className={`status-badge ${STATUS_CLASS.expired}`}>{STATUS_LABELS.expired}</span>
+                                </small>
+                              ) : null}
                             </span>
                             {batchSelectedGearIds.includes(item.id) && (
                               <span className="gear-picker-controls">
@@ -1501,6 +1614,9 @@ function App() {
                               ))}
                             </select>
                             <span className={`status-badge ${STATUS_CLASS[assignment.status]}`}>{STATUS_LABELS[assignment.status]}</span>
+                            {isExpiredDate(gearById[assignment.gearId]?.expirationDate) ? (
+                              <span className={`status-badge ${STATUS_CLASS.expired}`}>{STATUS_LABELS.expired}</span>
+                            ) : null}
                           </div>
                           <div>
                             <input
@@ -1530,16 +1646,20 @@ function App() {
                     : tripActionGroups.map(([category, assignments]) => (
                       <div key={category} className="action-category-group">
                         <h4>{category} <span className="pill">{assignments.length}</span></h4>
-                        {assignments.map((assignment) => {
-                          const gear = gearById[assignment.gearId]
-                          const action = assignment.status === 'needs_repair' ? 'Repair' : assignment.status === 'lost' ? 'Replace' : 'Restock'
+                        {assignments.map((item) => {
                           return (
-                            <div key={assignment.id} className="list-item">
+                            <div key={item.id} className="list-item">
                               <div>
-                                <strong>{action}: {gear ? `${gear.brand} ${gear.name}` : 'Unknown Gear'}</strong>
-                                <p>Qty {assignment.quantity}</p>
+                                <strong>{item.action}: {item.gearLabel}</strong>
+                                <p>Qty {item.quantity}</p>
+                                <p>Status: <span className={`status-badge ${STATUS_CLASS[item.status]}`}>{STATUS_LABELS[item.status]}</span></p>
+                                {item.note ? <p>Note: {item.note}</p> : null}
                               </div>
-                              <button type="button" className="btn btn-secondary" onClick={() => markAssignmentResolved(selectedTrip.id, assignment.id)}>Mark Resolved</button>
+                              {item.isResolvable ? (
+                                <button type="button" className="btn btn-secondary" onClick={() => markAssignmentResolved(selectedTrip.id, item.assignmentId)}>Mark Resolved</button>
+                              ) : (
+                                <span className={`status-badge ${STATUS_CLASS.expired}`}>Expired</span>
+                              )}
                             </div>
                           )
                         })}

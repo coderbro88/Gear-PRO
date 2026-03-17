@@ -590,6 +590,12 @@ button:hover,
   border-color: #c62828;
 }
 
+.status-expired {
+  color: #ffffff;
+  background: #7a2f2f;
+  border-color: #7a2f2f;
+}
+
 .inline-check {
   display: flex !important;
   gap: 0.4rem;
