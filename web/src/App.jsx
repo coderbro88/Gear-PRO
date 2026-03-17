@@ -170,6 +170,39 @@ function isMyPackLabel(label) {
   return String(label || '').trim().toLowerCase() === 'my pack'
 }
 
+function csvEscape(value) {
+  const text = String(value ?? '')
+  if (text.includes('"') || text.includes(',') || text.includes('\n')) {
+    return `"${text.replaceAll('"', '""')}"`
+  }
+  return text
+}
+
+function parseCsvLine(line) {
+  const cells = []
+  let current = ''
+  let inQuotes = false
+  for (let i = 0; i < line.length; i += 1) {
+    const ch = line[i]
+    const next = line[i + 1]
+    if (ch === '"') {
+      if (inQuotes && next === '"') {
+        current += '"'
+        i += 1
+      } else {
+        inQuotes = !inQuotes
+      }
+    } else if (ch === ',' && !inQuotes) {
+      cells.push(current.trim())
+      current = ''
+    } else {
+      current += ch
+    }
+  }
+  cells.push(current.trim())
+  return cells
+}
+
 function App() {
   const [appState, setAppState] = useState(loadState)
   const [tab, setTab] = useState('dashboard')
@@ -885,6 +918,117 @@ function App() {
     }
   }
 
+  const exportGearCsv = () => {
+    const header = ['brand', 'name', 'category', 'weight', 'quantity', 'notes']
+    const rows = appState.gear.map((item) => ([
+      csvEscape(item.brand),
+      csvEscape(item.name),
+      csvEscape(item.category),
+      csvEscape(item.weight),
+      csvEscape(item.quantity),
+      csvEscape(item.notes || ''),
+    ].join(',')))
+    const csv = [header.join(','), ...rows].join('\n')
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' })
+    const url = URL.createObjectURL(blob)
+    const anchor = document.createElement('a')
+    anchor.href = url
+    anchor.download = `gear-pro-gear-${new Date().toISOString().slice(0, 10)}.csv`
+    anchor.click()
+    URL.revokeObjectURL(url)
+  }
+
+  const downloadGearCsvTemplate = () => {
+    const header = ['brand', 'name', 'category', 'weight', 'quantity', 'notes']
+    const sample = ['Example Brand', 'Example Item', 'Clothing', '1.25', '1', 'Optional note']
+    const csv = [header.join(','), sample.map((v) => csvEscape(v)).join(',')].join('\n')
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' })
+    const url = URL.createObjectURL(blob)
+    const anchor = document.createElement('a')
+    anchor.href = url
+    anchor.download = 'gear-pro-gear-import-template.csv'
+    anchor.click()
+    URL.revokeObjectURL(url)
+  }
+
+  const importGearCsv = async (event) => {
+    const file = event.target.files?.[0]
+    if (!file) return
+    try {
+      const content = await file.text()
+      const lines = content
+        .split(/\r?\n/)
+        .map((line) => line.trim())
+        .filter((line) => line.length > 0)
+      if (lines.length < 2) {
+        window.alert('CSV appears empty. Please use the template format.')
+        return
+      }
+
+      const headerCells = parseCsvLine(lines[0]).map((cell) => cell.toLowerCase())
+      const idx = {
+        brand: headerCells.indexOf('brand'),
+        name: headerCells.indexOf('name'),
+        category: headerCells.indexOf('category'),
+        weight: headerCells.indexOf('weight'),
+        quantity: headerCells.indexOf('quantity'),
+        notes: headerCells.indexOf('notes'),
+      }
+      if (idx.brand < 0 || idx.name < 0 || idx.category < 0 || idx.weight < 0 || idx.quantity < 0) {
+        window.alert('CSV is missing required columns. Use the template and keep header names.')
+        return
+      }
+
+      const existingKeys = new Set(
+        appState.gear.map((item) => `${item.brand}|${item.name}|${item.category}`.trim().toLowerCase()),
+      )
+      const rows = lines.slice(1)
+      const toAdd = []
+      let skippedDuplicates = 0
+      let skippedInvalid = 0
+
+      rows.forEach((line) => {
+        const cells = parseCsvLine(line)
+        const brand = (cells[idx.brand] || '').trim()
+        const name = (cells[idx.name] || '').trim()
+        const category = (cells[idx.category] || 'Other').trim() || 'Other'
+        const weight = Number(cells[idx.weight] || 0)
+        const quantity = Number(cells[idx.quantity] || 0)
+        const notes = idx.notes >= 0 ? (cells[idx.notes] || '').trim() : ''
+
+        if (!brand || !name || weight <= 0 || quantity <= 0) {
+          skippedInvalid += 1
+          return
+        }
+        const key = `${brand}|${name}|${category}`.trim().toLowerCase()
+        if (existingKeys.has(key)) {
+          skippedDuplicates += 1
+          return
+        }
+        existingKeys.add(key)
+        toAdd.push({
+          id: crypto.randomUUID(),
+          brand,
+          name,
+          category,
+          weight,
+          quantity,
+          notes,
+        })
+      })
+
+      if (toAdd.length > 0) {
+        updateState((prev) => ({ ...prev, gear: [...prev.gear, ...toAdd] }))
+      }
+
+      window.alert(`CSV import complete. Added: ${toAdd.length}, duplicates skipped: ${skippedDuplicates}, invalid rows skipped: ${skippedInvalid}.`)
+    } catch {
+      window.alert('Could not import CSV. Please verify the file format.')
+    } finally {
+      event.target.value = ''
+    }
+  }
+
   const tripEssentialsReady = (trip) => {
     const essentialItems = trip.assignments.filter((assignment) => assignment.essential)
     if (essentialItems.length === 0) return true
@@ -1031,6 +1175,11 @@ function App() {
 
           <div className={uiClasses.listPanel}>
             <h2 className={uiClasses.sectionHeader}>Gear Library</h2>
+            <div className="gear-data-tools">
+              <button type="button" className="btn btn-secondary" onClick={downloadGearCsvTemplate}>Download CSV Template</button>
+              <button type="button" className="btn btn-primary" onClick={exportGearCsv}>Export Gear CSV</button>
+              <label className="upload">Import Gear CSV<input type="file" accept=".csv,text/csv" onChange={importGearCsv} /></label>
+            </div>
             <div className="row">
               <input value={gearSearch} onChange={(e) => setGearSearch(e.target.value)} placeholder="Search gear..." />
               <select value={gearFilterCategory} onChange={(e) => setGearFilterCategory(e.target.value)}>

@@ -506,6 +506,13 @@ button:hover,
   gap: 0.4rem;
 }
 
+.gear-data-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.55rem;
+}
+
 .selected {
   border-left: 3px solid var(--brand);
   padding-left: 0.65rem;
@@ -1281,6 +1288,11 @@ button:hover,
 
   .list-item {
     flex-direction: column;
+  }
+
+  .gear-data-tools {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
   .button-group {
