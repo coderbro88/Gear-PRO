@@ -1,0 +1,38 @@
+:root {
+  --bg-base: #1c2b1f;
+  --bg-surface: #ffffff;
+  --bg-elevated: #1c2b1f;
+  --bg-soft: #f5f3ee;
+  --text-primary: #2c2c2a;
+  --text-secondary: #7a9e7e;
+  --brand: #c9925a;
+  --brand-strong: #c9925a;
+  --accent: #5b8a60;
+  --danger: #c62828;
+  --border: #3a5a3e;
+
+  --space-1: 0.35rem;
+  --space-2: 0.55rem;
+  --space-3: 0.8rem;
+  --space-4: 1rem;
+  --space-5: 1.3rem;
+  --space-6: 1.8rem;
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+
+  --shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.24);
+  --shadow-strong: 0 18px 42px rgba(0, 0, 0, 0.32);
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f5f3ee;
+  color: var(--text-primary);
+}
+
+#root {
+  min-height: 100vh;
+}

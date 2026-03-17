@@ -1,0 +1,21 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="64" y1="64" x2="448" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F1C2E"/>
+      <stop offset="1" stop-color="#162A42"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="130" y1="160" x2="392" y2="352" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2A7B57"/>
+      <stop offset="1" stop-color="#1F5E43"/>
+    </linearGradient>
+  </defs>
+  <rect x="32" y="32" width="448" height="448" rx="108" fill="url(#bg)"/>
+  <path d="M88 370C120 320 150 282 178 256C202 277 227 304 252 340C266 317 283 294 303 271C333 295 366 329 402 370H88Z" fill="url(#accent)"/>
+  <path d="M126 340L196 224L266 340H126Z" fill="#DDEAF9"/>
+  <path d="M246 340L318 190L392 340H246Z" fill="#F4FBFF"/>
+  <path d="M250 358H300V396H250V358Z" fill="#F4FBFF"/>
+  <path d="M188 188C188 164 206 146 230 146H282C306 146 324 164 324 188V330H188V188Z" fill="#E6F0FF"/>
+  <path d="M210 194C210 181 220 171 233 171H279C292 171 302 181 302 194V233H210V194Z" fill="#BFD3F2"/>
+  <circle cx="256" cy="108" r="16" fill="#E7F4FF"/>
+  <text x="256" y="440" text-anchor="middle" fill="#E7F4FF" font-family="Arial, sans-serif" font-size="46" font-weight="700">GP2</text>
+</svg>

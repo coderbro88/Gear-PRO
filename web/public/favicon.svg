@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(200,185)">
+  <g transform="rotate(0)"><rect x="-6" y="-82" width="12" height="16" rx="3" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(30)"><rect x="-6" y="-82" width="12" height="16" rx="3" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(60)"><rect x="-6" y="-82" width="12" height="16" rx="3" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(90)"><rect x="-6" y="-82" width="12" height="16" rx="3" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(120)"><rect x="-6" y="-82" width="12" height="16" rx="3" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(150)"><rect x="-6" y="-82" width="12" height="16" rx="3" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(180)"><rect x="-6" y="-82" width="12" height="16" rx="3" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(210)"><rect x="-6" y="-82" width="12" height="16" rx="3" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(240)"><rect x="-6" y="-82" width="12" height="16" rx="3" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(270)"><rect x="-6" y="-82" width="12" height="16" rx="3" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(300)"><rect x="-6" y="-82" width="12" height="16" rx="3" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(330)"><rect x="-6" y="-82" width="12" height="16" rx="3" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <circle r="68" fill="none" stroke="#3A5A3E" stroke-width="2.5"/>
+  <circle r="48" fill="none" stroke="#C9925A" stroke-width="2.5"/>
+  <circle r="4.5" fill="#C9925A"/>
+  <line x1="0" y1="-60" x2="0" y2="-22" stroke="#C9925A" stroke-width="2.5"/>
+  <line x1="0" y1="22" x2="0" y2="60" stroke="#C9925A" stroke-width="2.5"/>
+  <line x1="-60" y1="0" x2="-22" y2="0" stroke="#C9925A" stroke-width="2.5"/>
+  <line x1="22" y1="0" x2="60" y2="0" stroke="#C9925A" stroke-width="2.5"/>
+  <polygon points="-60,50 -40,14 -22,28 0,-8 22,28 40,14 60,50" fill="#5B8A60" opacity="0.6"/>
+  <polygon points="-50,50 -32,22 -14,34 0,8 14,34 32,22 50,50" fill="#3A5A3E" opacity="0.4"/>
+</g>
+</svg>

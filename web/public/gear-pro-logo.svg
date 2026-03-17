@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="680" height="200" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(110,100)">
+  <g transform="rotate(0)"><rect x="-4" y="-58" width="8" height="12" rx="2" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(30)"><rect x="-4" y="-58" width="8" height="12" rx="2" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(60)"><rect x="-4" y="-58" width="8" height="12" rx="2" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(90)"><rect x="-4" y="-58" width="8" height="12" rx="2" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(120)"><rect x="-4" y="-58" width="8" height="12" rx="2" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(150)"><rect x="-4" y="-58" width="8" height="12" rx="2" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(180)"><rect x="-4" y="-58" width="8" height="12" rx="2" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(210)"><rect x="-4" y="-58" width="8" height="12" rx="2" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(240)"><rect x="-4" y="-58" width="8" height="12" rx="2" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(270)"><rect x="-4" y="-58" width="8" height="12" rx="2" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(300)"><rect x="-4" y="-58" width="8" height="12" rx="2" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <g transform="rotate(330)"><rect x="-4" y="-58" width="8" height="12" rx="2" fill="#3A5A3E" stroke="#3A5A3E" stroke-width="0.5"/></g>
+  <circle r="48" fill="none" stroke="#3A5A3E" stroke-width="2"/>
+  <circle r="34" fill="none" stroke="#C9925A" stroke-width="1.8"/>
+  <circle r="3" fill="#C9925A"/>
+  <line x1="0" y1="-42" x2="0" y2="-16" stroke="#C9925A" stroke-width="1.8"/>
+  <line x1="0" y1="16" x2="0" y2="42" stroke="#C9925A" stroke-width="1.8"/>
+  <line x1="-42" y1="0" x2="-16" y2="0" stroke="#C9925A" stroke-width="1.8"/>
+  <line x1="16" y1="0" x2="42" y2="0" stroke="#C9925A" stroke-width="1.8"/>
+  <polygon points="-42,35 -28,10 -15,20 0,-5 15,20 28,10 42,35" fill="#5B8A60" opacity="0.6"/>
+  <polygon points="-36,35 -22,15 -10,24 0,5 10,24 22,15 36,35" fill="#3A5A3E" opacity="0.4"/>
+</g>
+<line x1="185" y1="40" x2="185" y2="160" stroke="#C9925A" stroke-width="1.5" opacity="0.4"/>
+<text x="210" y="95" font-family="'Trebuchet MS', 'Gill Sans', sans-serif" font-size="68" font-weight="700" fill="#2C2C2A">GEAR PRO</text>
+<text x="212" y="128" font-family="'Trebuchet MS', 'Gill Sans', sans-serif" font-size="16" font-weight="400" fill="#7A9E7E">Hunting &amp; camping gear management</text>
+</svg>

@@ -1,0 +1,1650 @@
+{
+  "schemaVersion": 2,
+  "exportedAt": "2026-03-17T01:58:12.610584Z",
+  "app": "GearPro2 Web",
+  "data": {
+    "schemaVersion": 2,
+    "lastUpdatedAt": "2026-03-17T01:58:12.610587Z",
+    "gear": [
+      {
+        "id": "f03f3ef9-a7e9-47d2-b058-12a15b97196f",
+        "brand": "KUIU",
+        "name": "Super Down Ultra",
+        "category": "Clothing",
+        "weight": 0.4938,
+        "quantity": 1,
+        "notes": "Legacy label: Warm Jacket | Marked needed in source sheet"
+      },
+      {
+        "id": "3ca6d59f-3af8-4277-b0c4-0f7b5bdb41ae",
+        "brand": "KUIU",
+        "name": "Axis Hybrid Jacket",
+        "category": "Clothing",
+        "weight": 1.4375,
+        "quantity": 1,
+        "notes": "Legacy label: Jacket"
+      },
+      {
+        "id": "0daa184f-9c61-4d8e-a0ed-ee55a2b0a832",
+        "brand": "KUIU",
+        "name": "Kutana Gale Force Pant",
+        "category": "Clothing",
+        "weight": 2.2125,
+        "quantity": 1,
+        "notes": "Legacy label: Frigid Pant | Marked needed in source sheet"
+      },
+      {
+        "id": "8053ec90-22cb-44e3-9026-15914cb6feb0",
+        "brand": "KUIU",
+        "name": "Axis Hybrid Pant",
+        "category": "Clothing",
+        "weight": 1.5,
+        "quantity": 1,
+        "notes": "Legacy label: Cold Pant | Marked needed in source sheet"
+      },
+      {
+        "id": "0fedef7f-267c-4ac7-b0c6-a97d534ee34c",
+        "brand": "KUIU",
+        "name": "Attack Pant",
+        "category": "Clothing",
+        "weight": 2.3125,
+        "quantity": 2,
+        "notes": "Legacy label: Warm Pant"
+      },
+      {
+        "id": "164c4a9f-deb1-4539-b616-07add8f38a0c",
+        "brand": "Wrangler",
+        "name": "Light Pants",
+        "category": "Clothing",
+        "weight": 1.1562,
+        "quantity": 1,
+        "notes": "Legacy label: Light Pant"
+      },
+      {
+        "id": "530e3544-11ec-4b13-b64d-0fd589acb9b4",
+        "brand": "Lowa",
+        "name": "Renegade GTX",
+        "category": "Clothing",
+        "weight": 2.4375,
+        "quantity": 1,
+        "notes": "Legacy label: Hiking Boots | Marked needed in source sheet"
+      },
+      {
+        "id": "921e4d83-85a6-4fa8-a1c1-675fdf6ee9f6",
+        "brand": "KUIU",
+        "name": "Northstar Glove",
+        "category": "Clothing",
+        "weight": 0.4437,
+        "quantity": 1,
+        "notes": "Legacy label: Extreme Glove | Marked needed in source sheet"
+      },
+      {
+        "id": "9e756b35-096c-4e87-9b72-bec2f2a90a65",
+        "brand": "KUIU",
+        "name": "Yukon Gaiters",
+        "category": "Clothing",
+        "weight": 0.75,
+        "quantity": 1,
+        "notes": "Legacy label: Gaiters | Marked needed in source sheet"
+      },
+      {
+        "id": "637c2833-ec0c-49a9-85cc-29eda0fc4a98",
+        "brand": "KUIU",
+        "name": "PELOTON 97 FLEECE",
+        "category": "Clothing",
+        "weight": 0.3125,
+        "quantity": 1,
+        "notes": "Legacy label: Hoodie | Marked needed in source sheet"
+      },
+      {
+        "id": "6db92e57-aa62-411c-9419-f9193df67357",
+        "brand": "KUIU",
+        "name": "ULTRA MERINO 145 ZIP-T",
+        "category": "Clothing",
+        "weight": 0.5,
+        "quantity": 1,
+        "notes": "Legacy label: Base Layer Shirt"
+      },
+      {
+        "id": "f12b653e-063d-4744-96e5-b4b4c195221d",
+        "brand": "KUIU",
+        "name": "ULTRA MERINO 145",
+        "category": "Clothing",
+        "weight": 0.4188,
+        "quantity": 1,
+        "notes": "Legacy label: Base Layer Pants"
+      },
+      {
+        "id": "974e312a-b08c-4c89-b883-55666c9b1839",
+        "brand": "KUIU",
+        "name": "ULTRA MERINO 125",
+        "category": "Clothing",
+        "weight": 0.3812,
+        "quantity": 1,
+        "notes": "Legacy label: Long Sleve | Marked needed in source sheet"
+      },
+      {
+        "id": "152bfb87-b58b-4b03-bce2-b1f8803bcb6e",
+        "brand": "KUIU",
+        "name": "Peloton 118",
+        "category": "Clothing",
+        "weight": 0.3812,
+        "quantity": 1,
+        "notes": "Legacy label: Base Layer Long Sleve | Marked needed in source sheet"
+      },
+      {
+        "id": "afd1d98b-44d0-4f99-abd2-d77f1506712b",
+        "brand": "KUIU",
+        "name": "ENDURO SS CREW",
+        "category": "Clothing",
+        "weight": 0.3438,
+        "quantity": 1,
+        "notes": "Legacy label: Short Sleve"
+      },
+      {
+        "id": "9d4c102b-5bc2-4893-9831-c23de57e86cc",
+        "brand": "KUIU",
+        "name": "Axis Gloves",
+        "category": "Clothing",
+        "weight": 0.3125,
+        "quantity": 1,
+        "notes": "Legacy label: Gloves"
+      },
+      {
+        "id": "ab715ee0-edc8-449e-9b14-28436f18b82c",
+        "brand": "MERIWOOL",
+        "name": "Mens Boxer Briefs",
+        "category": "Clothing",
+        "weight": 0.25,
+        "quantity": 2,
+        "notes": "Legacy label: Underware | Base camp gear | Marked needed in source sheet"
+      },
+      {
+        "id": "aacfa488-153c-47c1-a589-e9a4d10d54b9",
+        "brand": "Crocks",
+        "name": "Camp Crocks",
+        "category": "Clothing",
+        "weight": 0.8125,
+        "quantity": 1,
+        "notes": "Legacy label: Camp Shoe | Marked needed in source sheet"
+      },
+      {
+        "id": "7a188ec7-7687-4a3a-b536-361f7cdc5835",
+        "brand": "KUIU",
+        "name": "Axis Balaclava",
+        "category": "Clothing",
+        "weight": 0.1625,
+        "quantity": 1,
+        "notes": "Legacy label: Balaclava | Marked needed in source sheet"
+      },
+      {
+        "id": "c1e5e8fa-f551-4112-aec7-3f4e1edc06cf",
+        "brand": "KUIU",
+        "name": "ULTRA MERINO OVER-THE-CALF SOCK",
+        "category": "Clothing",
+        "weight": 0.675,
+        "quantity": 3,
+        "notes": "Legacy label: Socks | Base camp gear | Marked needed in source sheet"
+      },
+      {
+        "id": "790e7e93-41a8-4f23-8fa1-d9a9766029bb",
+        "brand": "KUIU",
+        "name": "ULTRA MERINO 145 NECK GAITER",
+        "category": "Clothing",
+        "weight": 0.0563,
+        "quantity": 1,
+        "notes": "Legacy label: Neck Gaiter"
+      },
+      {
+        "id": "6c572005-02d8-434f-abf4-41e541ec1f38",
+        "brand": "Anyoo",
+        "name": "Lightweight Reusable Rain Jacket",
+        "category": "Clothing",
+        "weight": 0.5381,
+        "quantity": 1,
+        "notes": "Legacy label: Rain Jacket"
+      },
+      {
+        "id": "5bb1866f-8ce1-4100-97fe-d07895922f39",
+        "brand": "Misc",
+        "name": "Orange Vest",
+        "category": "Clothing",
+        "weight": 0.0969,
+        "quantity": 1,
+        "notes": "Marked needed in source sheet"
+      },
+      {
+        "id": "6ab1aa0f-e3bb-4554-9dea-209e4df805f4",
+        "brand": "KUIU",
+        "name": "KUIU KUTANA STORM SHELL JACKET",
+        "category": "Clothing",
+        "weight": 1.25,
+        "quantity": 1,
+        "notes": "Legacy label: Rain Jacket"
+      },
+      {
+        "id": "1d72e070-1df7-4a61-b30b-dab2848c6eb1",
+        "brand": "KUIU",
+        "name": "KUIU KUTANA STORM SHELL PANT",
+        "category": "Clothing",
+        "weight": 1.075,
+        "quantity": 1,
+        "notes": "Legacy label: Rain Pants"
+      },
+      {
+        "id": "f6239ce0-8e51-4e80-a642-73442c5fea22",
+        "brand": "KUIU",
+        "name": "ULTRA MERINO 210 GLOVE",
+        "category": "Clothing",
+        "weight": 0.0875,
+        "quantity": 1,
+        "notes": "Legacy label: Base Layer Glove | Marked needed in source sheet"
+      },
+      {
+        "id": "66e9c7b3-c733-40b2-8ec4-403d1098097c",
+        "brand": "KUIU",
+        "name": "KENAI HAT",
+        "category": "Clothing",
+        "weight": 0.2062,
+        "quantity": 1,
+        "notes": "Legacy label: Blaze Orange Warm Hat | Marked needed in source sheet"
+      },
+      {
+        "id": "5bb5d0a0-d2be-4bdc-b27d-528db0c52493",
+        "brand": "Airblaster",
+        "name": "Merino Ninja Suit (Orange)",
+        "category": "Clothing",
+        "weight": 1.125,
+        "quantity": 1,
+        "notes": "Legacy label: Long Johns | Marked needed in source sheet"
+      },
+      {
+        "id": "761dea8b-72c4-4c53-8c72-afd22e2e36f4",
+        "brand": "JetBoil",
+        "name": "Jetboil Flash Cooking System",
+        "category": "Cooking Gear",
+        "weight": 0.78,
+        "quantity": 1,
+        "notes": "Legacy label: Cooker | Base camp gear | Marked needed in source sheet"
+      },
+      {
+        "id": "8720f969-933e-4cad-a5f4-f86443519ea2",
+        "brand": "HydraPak",
+        "name": "Seeker 4L Collapsible Water Container",
+        "category": "Cooking Gear",
+        "weight": 0.275,
+        "quantity": 1,
+        "notes": "Legacy label: Water Storage | Base camp gear"
+      },
+      {
+        "id": "6d17c7e7-bafd-4cf4-8691-3427426c884f",
+        "brand": "Platypus",
+        "name": "HoserReservoir2.0L",
+        "category": "Cooking Gear",
+        "weight": 0.225,
+        "quantity": 1,
+        "notes": "Legacy label: Water Storage | Marked needed in source sheet"
+      },
+      {
+        "id": "d0d6980b-d534-4664-bbdf-46b7e304dc70",
+        "brand": "Hydro Flask",
+        "name": "Flask",
+        "category": "Cooking Gear",
+        "weight": 0.7475,
+        "quantity": 1,
+        "notes": ""
+      },
+      {
+        "id": "015df5cf-9414-47bc-8267-f7bb04255223",
+        "brand": "HydraPak",
+        "name": "Seeker 3L Collapsible Water Container",
+        "category": "Cooking Gear",
+        "weight": 0.1425,
+        "quantity": 1,
+        "notes": "Legacy label: Water Storage | Base camp gear | Marked needed in source sheet"
+      },
+      {
+        "id": "7ea09e27-bc23-49c0-8faf-72a357602aa5",
+        "brand": "Sawyer",
+        "name": "MiniSqueezeFilter",
+        "category": "Cooking Gear",
+        "weight": 0.0969,
+        "quantity": 1,
+        "notes": "Legacy label: Water Filtration | Marked needed in source sheet"
+      },
+      {
+        "id": "cb35bbae-278d-4989-8753-29e6ea83e58c",
+        "brand": "Uberleben",
+        "name": "Zunden Fire Starter",
+        "category": "Cooking Gear",
+        "weight": 0.2687,
+        "quantity": 2,
+        "notes": "Legacy label: Ferro Rod | Marked needed in source sheet"
+      },
+      {
+        "id": "c690ed70-0757-452e-b1e0-c1a75b74a2be",
+        "brand": "Sea to Sumit",
+        "name": "X-Bowl",
+        "category": "Cooking Gear",
+        "weight": 0.1806,
+        "quantity": 1,
+        "notes": "Legacy label: Bowl"
+      },
+      {
+        "id": "542c3ba3-4a38-4186-ab9e-ba97acf7dfe3",
+        "brand": "JetBoil",
+        "name": "Fuel Canister",
+        "category": "Cooking Gear",
+        "weight": 0.4313,
+        "quantity": 1,
+        "notes": "Base camp gear | Marked needed in source sheet"
+      },
+      {
+        "id": "f7bb2229-68ae-4134-8a64-5137258d39bb",
+        "brand": "Sea to Sumit",
+        "name": "X Mug",
+        "category": "Cooking Gear",
+        "weight": 0.1475,
+        "quantity": 1,
+        "notes": "Legacy label: Coffee Cup"
+      },
+      {
+        "id": "dc488bc5-a6bc-4eb9-ad0b-c86fb4b73691",
+        "brand": "finessCity",
+        "name": "Spork",
+        "category": "Cooking Gear",
+        "weight": 0.0331,
+        "quantity": 1,
+        "notes": "Marked needed in source sheet"
+      },
+      {
+        "id": "bed5f7ec-2bb0-4841-b7e3-b13f79ecff54",
+        "brand": "JetBoil",
+        "name": "Jetset Utensil Kit",
+        "category": "Cooking Gear",
+        "weight": 0.0575,
+        "quantity": 1,
+        "notes": "Legacy label: Utensils | Base camp gear"
+      },
+      {
+        "id": "7b526dbb-7413-45b0-9e63-d5970a3f62d8",
+        "brand": "Garmin",
+        "name": "inReach Messenger",
+        "category": "Electronics",
+        "weight": 0.2188,
+        "quantity": 1,
+        "notes": "Legacy label: GPS/SOS | Marked needed in source sheet"
+      },
+      {
+        "id": "8834e959-2c4c-4b8f-bce2-ffaecb2308ca",
+        "brand": "Kestrel",
+        "name": "Kestrel 2700",
+        "category": "Electronics",
+        "weight": 0.2249,
+        "quantity": 1,
+        "notes": "Legacy label: Balistics Calc"
+      },
+      {
+        "id": "c9660963-903a-4f21-af8f-a59a0896da39",
+        "brand": "Radiodity",
+        "name": "Radioddity Gs-5b",
+        "category": "Electronics",
+        "weight": 0.736,
+        "quantity": 1,
+        "notes": "Legacy label: HAM Radio | Marked needed in source sheet"
+      },
+      {
+        "id": "d2058ed6-3abc-4324-8da2-ca186815ee61",
+        "brand": "YAESU",
+        "name": "Ft-5B",
+        "category": "Electronics",
+        "weight": 0.6219,
+        "quantity": 1,
+        "notes": "Legacy label: HAM Radio | Marked needed in source sheet"
+      },
+      {
+        "id": "9160db18-4980-4f79-8f21-7df5020af516",
+        "brand": "Goal Zero",
+        "name": "Nomad 10",
+        "category": "Electronics",
+        "weight": 1.151,
+        "quantity": 1,
+        "notes": "Legacy label: Solar | Marked needed in source sheet"
+      },
+      {
+        "id": "420127cb-8b7e-429e-b1ea-040e8b84f49e",
+        "brand": "Petzl",
+        "name": "Actik Core",
+        "category": "Electronics",
+        "weight": 0.1762,
+        "quantity": 1,
+        "notes": "Legacy label: Headlamp | Marked needed in source sheet"
+      },
+      {
+        "id": "029a650b-61d7-4e73-9e2b-b44d6fbaffbc",
+        "brand": "Goal Zero",
+        "name": "Flip 36",
+        "category": "Electronics",
+        "weight": 0.445,
+        "quantity": 1,
+        "notes": "Legacy label: Charger | Marked needed in source sheet"
+      },
+      {
+        "id": "f393b336-e794-4d5b-84bc-790fe73d41ab",
+        "brand": "Misc",
+        "name": "Charging cords",
+        "category": "Electronics",
+        "weight": 0.0881,
+        "quantity": 1,
+        "notes": "Legacy label: Charging Cable | Marked needed in source sheet"
+      },
+      {
+        "id": "d10c7740-2d9c-42eb-9ce3-ea9953f6298d",
+        "brand": "Silva",
+        "name": "Expedition S Compass",
+        "category": "First Aid",
+        "weight": 0.2006,
+        "quantity": 1,
+        "notes": "Legacy label: Compass | Marked needed in source sheet"
+      },
+      {
+        "id": "6820f6c3-5e50-484b-b22c-230f4a922dcb",
+        "brand": "Adventure Medkit",
+        "name": "Ultralight/Watertight .7 Medical Kit",
+        "category": "First Aid",
+        "weight": 0.4037,
+        "quantity": 1,
+        "notes": "Legacy label: First Aid Bag | Marked needed in source sheet"
+      },
+      {
+        "id": "2b2ae225-e40f-46c0-b650-8efbb3089c1b",
+        "brand": "Tact Bivvy 2.0",
+        "name": "Space Blanket",
+        "category": "First Aid",
+        "weight": 0.2931,
+        "quantity": 1,
+        "notes": ""
+      },
+      {
+        "id": "8104db1d-3ab0-4e1a-b8d4-98c8e1a9a09e",
+        "brand": "UCO",
+        "name": "Survival Matches",
+        "category": "First Aid",
+        "weight": 0.0375,
+        "quantity": 1,
+        "notes": "Legacy label: Lighter/Matches"
+      },
+      {
+        "id": "ef78353b-0c1c-4385-9447-a60b35290623",
+        "brand": "Misc",
+        "name": "Blister Tape",
+        "category": "First Aid",
+        "weight": 0.0925,
+        "quantity": 1,
+        "notes": ""
+      },
+      {
+        "id": "5a557cb8-db29-4052-8576-55af3c5c3c2e",
+        "brand": "Uberleben",
+        "name": "Burning Rope",
+        "category": "First Aid",
+        "weight": 0.035,
+        "quantity": 1,
+        "notes": "Legacy label: Lighter/Matches | Marked needed in source sheet"
+      },
+      {
+        "id": "570767ec-2e08-4979-b5b0-d0d108a5b7d0",
+        "brand": "Urisac",
+        "name": "URSACK ALLMITEY",
+        "category": "Food",
+        "weight": 0.7275,
+        "quantity": 1,
+        "notes": "Legacy label: Food Storage | Marked needed in source sheet"
+      },
+      {
+        "id": "293e39c1-b881-411a-9a5c-709dd1a1e8a8",
+        "brand": "Misc",
+        "name": "Misc",
+        "category": "Food",
+        "weight": 0.01,
+        "quantity": 7,
+        "notes": "Legacy label: Breakfast"
+      },
+      {
+        "id": "21ba68be-9c67-49e0-a759-a9af4a54f96a",
+        "brand": "Mountain House",
+        "name": "Lunch",
+        "category": "Food",
+        "weight": 2.0694,
+        "quantity": 7,
+        "notes": "Base camp gear"
+      },
+      {
+        "id": "acf70c04-bded-40ed-8a14-a7cb2c06b144",
+        "brand": "Mountain House",
+        "name": "Dinner",
+        "category": "Food",
+        "weight": 2.0694,
+        "quantity": 7,
+        "notes": "Base camp gear"
+      },
+      {
+        "id": "f5f49775-bceb-40e5-b094-da0325798575",
+        "brand": "FoxPro",
+        "name": "Hi-Jack",
+        "category": "Game Calls",
+        "weight": 3.0,
+        "quantity": 1,
+        "notes": "Legacy label: Electronic Call | Marked needed in source sheet"
+      },
+      {
+        "id": "6b0e08e2-4454-495f-9856-2b60e3ecbb1d",
+        "brand": "Phelps",
+        "name": "Beginner AMP 3 Pack",
+        "category": "Game Calls",
+        "weight": 0.0063,
+        "quantity": 1,
+        "notes": "Legacy label: ELk Diaphrams Beginner"
+      },
+      {
+        "id": "7433d580-152c-4480-b4ec-f036fc321250",
+        "brand": "Phelps",
+        "name": "Fawn/Jack Closed Reed",
+        "category": "Game Calls",
+        "weight": 0.0444,
+        "quantity": 1,
+        "notes": "Legacy label: Predator Call"
+      },
+      {
+        "id": "be88251f-b316-44f0-be08-3f7acc1578f8",
+        "brand": "Phelps",
+        "name": "PDO (Phelps Diaphragm Organizer)",
+        "category": "Game Calls",
+        "weight": 0.0312,
+        "quantity": 1,
+        "notes": "Legacy label: Diaphram Pouch"
+      },
+      {
+        "id": "0bf7c699-f48b-4f54-8386-24c35bdfbd3a",
+        "brand": "Phelps",
+        "name": "UNLEASHED Bugle Tube Holder",
+        "category": "Game Calls",
+        "weight": 0.0312,
+        "quantity": 1,
+        "notes": "Legacy label: Elk Bugle Tube Backpack holder"
+      },
+      {
+        "id": "67c8d020-25ff-419d-823d-81fed311326b",
+        "brand": "Misc",
+        "name": "Diaphram Call",
+        "category": "Game Calls",
+        "weight": 0.0063,
+        "quantity": 1,
+        "notes": "Legacy label: Turkey Call"
+      },
+      {
+        "id": "39eda82a-5862-45e1-9be2-766be9837801",
+        "brand": "EOTECH",
+        "name": "Vudu\u00ae 5-25x50 FFP",
+        "category": "Hunting/Kill Kit",
+        "weight": 1.8438,
+        "quantity": 1,
+        "notes": "Legacy label: Scope | Marked needed in source sheet"
+      },
+      {
+        "id": "b57fe7fc-a9ff-46dd-9ae5-e10ef9fe39ce",
+        "brand": "Christensen Arms",
+        "name": "Ridgeline 300 Win",
+        "category": "Hunting/Kill Kit",
+        "weight": 6.3,
+        "quantity": 1,
+        "notes": "Legacy label: Rifle | Marked needed in source sheet"
+      },
+      {
+        "id": "0169a481-9383-4ed7-987b-ee1fdfa5de28",
+        "brand": "KUIU",
+        "name": "Sling Hook",
+        "category": "Hunting/Kill Kit",
+        "weight": 0.0437,
+        "quantity": 1,
+        "notes": ""
+      },
+      {
+        "id": "9f76e860-637e-449d-9933-e23b1fc9cfab",
+        "brand": "Glock",
+        "name": "Glock 19",
+        "category": "Hunting/Kill Kit",
+        "weight": 1.543,
+        "quantity": 1,
+        "notes": "Legacy label: Pistol | Marked needed in source sheet"
+      },
+      {
+        "id": "d4a30667-e12b-45d0-b3c5-7b3bba2db70b",
+        "brand": "Q",
+        "name": "Trash Panda",
+        "category": "Hunting/Kill Kit",
+        "weight": 0.7375,
+        "quantity": 1,
+        "notes": "Legacy label: Supressor | Marked needed in source sheet"
+      },
+      {
+        "id": "f49170a7-0b5e-4e3b-b0f6-a015a3a002c2",
+        "brand": "Vortex",
+        "name": "Fury 301",
+        "category": "Hunting/Kill Kit",
+        "weight": 2.156,
+        "quantity": 1,
+        "notes": "Legacy label: Binoculars | Marked needed in source sheet"
+      },
+      {
+        "id": "0ddf4201-78fe-4012-b379-256b7d613cfc",
+        "brand": "Vortex",
+        "name": "Vortex Viper HD 15-45x65 Spotting Scope (Angled Viewing)",
+        "category": "Hunting/Kill Kit",
+        "weight": 3.6875,
+        "quantity": 1,
+        "notes": "Legacy label: Spotting Scope | Marked needed in source sheet"
+      },
+      {
+        "id": "2c1255e3-7ae3-4ec7-b918-de29e70dd40f",
+        "brand": "CVA",
+        "name": "Acura LRX",
+        "category": "Hunting/Kill Kit",
+        "weight": 8.25,
+        "quantity": 1,
+        "notes": "Legacy label: Muzzleloader - RIFLE"
+      },
+      {
+        "id": "a33b5e73-3c80-44ee-8918-6c630f112ca6",
+        "brand": "Vortex",
+        "name": "Vortex Summit II Carbon Fiber Tripod with Pan/Tilt QR Head",
+        "category": "Hunting/Kill Kit",
+        "weight": 2.5,
+        "quantity": 1,
+        "notes": "Legacy label: Tripod | Marked needed in source sheet"
+      },
+      {
+        "id": "00fd5e4c-cb4f-449f-b398-0040f8005234",
+        "brand": "Nikon",
+        "name": "Rangefinder",
+        "category": "Hunting/Kill Kit",
+        "weight": 0.5381,
+        "quantity": 1,
+        "notes": "Legacy label: Range Finder"
+      },
+      {
+        "id": "c49a46fe-dd88-4be2-a6f4-23c2882ca1f4",
+        "brand": "Condor",
+        "name": "Kukri Knife",
+        "category": "Hunting/Kill Kit",
+        "weight": 2.0,
+        "quantity": 1,
+        "notes": "Legacy label: Brush Knife"
+      },
+      {
+        "id": "64b6e074-81c0-40f6-bc0f-97b98b3d4eba",
+        "brand": "KUIU",
+        "name": "Pro Bino Harness",
+        "category": "Hunting/Kill Kit",
+        "weight": 0.716,
+        "quantity": 1,
+        "notes": "Legacy label: BINO Harness | Marked needed in source sheet"
+      },
+      {
+        "id": "cceec85d-cd05-4187-9c5e-4eabb75f316a",
+        "brand": "KUIU",
+        "name": "PHONE HOLDER | VERDE",
+        "category": "Hunting/Kill Kit",
+        "weight": 0.2375,
+        "quantity": 1,
+        "notes": "Legacy label: Phone Holder | Marked needed in source sheet"
+      },
+      {
+        "id": "c6378e57-cbae-442d-b02a-f5494f83c47a",
+        "brand": "KUIU",
+        "name": "KUIU RIFLE COVER | VERDE",
+        "category": "Hunting/Kill Kit",
+        "weight": 0.4,
+        "quantity": 1,
+        "notes": "Legacy label: Rifle Cover | Marked needed in source sheet"
+      },
+      {
+        "id": "4ee82433-83cb-4a22-9e61-820c537b2af8",
+        "brand": "Havalon",
+        "name": "Talon Hunt",
+        "category": "Hunting/Kill Kit",
+        "weight": 0.785,
+        "quantity": 1,
+        "notes": "Legacy label: Knives - Skinning Stuff | Marked needed in source sheet"
+      },
+      {
+        "id": "5306c62b-3149-40ed-b219-2c67b2682480",
+        "brand": "Allen Backcountry",
+        "name": "Quartering Bags - 4 pacl",
+        "category": "Hunting/Kill Kit",
+        "weight": 2.097,
+        "quantity": 1,
+        "notes": "Legacy label: Game Bags - Large Game"
+      },
+      {
+        "id": "4c70662c-4b5e-413e-b6e3-b1e901c27ce0",
+        "brand": "KUIU",
+        "name": "Bow Holster",
+        "category": "Hunting/Kill Kit",
+        "weight": 0.2644,
+        "quantity": 1,
+        "notes": "Legacy label: Bow - Backpack Holster"
+      },
+      {
+        "id": "4cc7be0e-59e9-49b5-ad08-506ff6def1aa",
+        "brand": "Allen Backcountry",
+        "name": "Quartering Bags - 4 pacl",
+        "category": "Hunting/Kill Kit",
+        "weight": 0.0541,
+        "quantity": 1,
+        "notes": "Legacy label: Game Bags - Medium Game"
+      },
+      {
+        "id": "34eeada9-56f5-48c8-bc55-5ff3c4cc4967",
+        "brand": "Misc",
+        "name": "Blackpowder Tube, bullet & powder",
+        "category": "Hunting/Kill Kit",
+        "weight": 0.3969,
+        "quantity": 5,
+        "notes": "Legacy label: Ammo Blackpowder"
+      },
+      {
+        "id": "44dfc760-99c6-495e-a824-79e945f717b8",
+        "brand": "CVA",
+        "name": "Loading Rod",
+        "category": "Hunting/Kill Kit",
+        "weight": 0.3063,
+        "quantity": 1,
+        "notes": "Legacy label: Muzzleloader - Loading ROD"
+      },
+      {
+        "id": "ad59a177-b214-4289-9abb-8ba448f29294",
+        "brand": "Helinox",
+        "name": "Chair Zero",
+        "category": "Misc Gear",
+        "weight": 1.151,
+        "quantity": 1,
+        "notes": "Legacy label: Chair | Base camp gear"
+      },
+      {
+        "id": "4e54e8c2-c963-4733-8531-0524eb027606",
+        "brand": "LUXE Hiking",
+        "name": "Flip-Lock Trekking Pole",
+        "category": "Misc Gear",
+        "weight": 0.8588,
+        "quantity": 2,
+        "notes": "Legacy label: Trecking Pole | Marked needed in source sheet"
+      },
+      {
+        "id": "f4bb8141-1d24-4918-8e3e-e4a9cd44b094",
+        "brand": "KUIU",
+        "name": "Rain bag cover",
+        "category": "Misc Gear",
+        "weight": 0.2875,
+        "quantity": 1,
+        "notes": "Marked needed in source sheet"
+      },
+      {
+        "id": "54cd6575-787a-4f5a-8fe9-c866ff34db98",
+        "brand": "Gear Aid",
+        "name": "550 Paracord - 100'",
+        "category": "Misc Gear",
+        "weight": 0.4475,
+        "quantity": 1,
+        "notes": "Legacy label: Parachute Cord - Camo | Marked needed in source sheet"
+      },
+      {
+        "id": "b8a7cef2-4823-4591-8459-8a6705c1da2f",
+        "brand": "Gear Aid",
+        "name": "550 Paracord - 100'",
+        "category": "Misc Gear",
+        "weight": 0.4169,
+        "quantity": 1,
+        "notes": "Legacy label: Parachute Cord - Red"
+      },
+      {
+        "id": "bab2bd32-ba07-475b-9611-bd5993696754",
+        "brand": "Combat Wipes",
+        "name": "Wilderness Bath Wipe",
+        "category": "Personal Hygiene",
+        "weight": 0.4275,
+        "quantity": 1,
+        "notes": "Legacy label: TP | Marked needed in source sheet"
+      },
+      {
+        "id": "3481d860-cce4-41d0-b3fa-f93081fdfcb7",
+        "brand": "KUIU",
+        "name": "MICROFIBER CLOTH",
+        "category": "Personal Hygiene",
+        "weight": 0.0312,
+        "quantity": 1,
+        "notes": "Legacy label: Towel | Base camp gear"
+      },
+      {
+        "id": "53a75ce3-3a40-41db-bbde-a009a3d51352",
+        "brand": "HME",
+        "name": "Camo Face Paint",
+        "category": "Personal Hygiene",
+        "weight": 0.1013,
+        "quantity": 1,
+        "notes": "Legacy label: Face Paint Camo"
+      },
+      {
+        "id": "0addf905-d3bf-44cc-8661-c5c6112531f6",
+        "brand": "Sea to Sumit",
+        "name": "Citronella Wilderness Wash",
+        "category": "Personal Hygiene",
+        "weight": 0.1919,
+        "quantity": 1,
+        "notes": "Legacy label: Soap | Base camp gear"
+      },
+      {
+        "id": "6304f481-078d-4e06-9c98-501d00e65270",
+        "brand": "Dead Down Wind",
+        "name": "Soap",
+        "category": "Personal Hygiene",
+        "weight": 0.2812,
+        "quantity": 1,
+        "notes": "Base camp gear"
+      },
+      {
+        "id": "46368a8a-f9a6-4d60-a9b2-d0cd6daf8813",
+        "brand": "Wildlife Research Center",
+        "name": "Antiperspirant and Deodorant",
+        "category": "Personal Hygiene",
+        "weight": 0.4012,
+        "quantity": 2,
+        "notes": "Legacy label: Deodorant | Marked needed in source sheet"
+      },
+      {
+        "id": "f5416451-4c37-4a11-9535-32e0007ffe36",
+        "brand": "Dead Down Wind",
+        "name": "No Scent",
+        "category": "Personal Hygiene",
+        "weight": 0.0094,
+        "quantity": 1,
+        "notes": "Legacy label: Chapstick | Marked needed in source sheet"
+      },
+      {
+        "id": "8ee7c115-6000-48c9-9fa7-ca48e5b02de3",
+        "brand": "Dead Down Wind",
+        "name": "Deodorant",
+        "category": "Personal Hygiene",
+        "weight": 0.0094,
+        "quantity": 1,
+        "notes": ""
+      },
+      {
+        "id": "00456844-1654-4530-857b-adfb8c19b58e",
+        "brand": "Misc",
+        "name": "Insect Repelant",
+        "category": "Personal Hygiene",
+        "weight": 0.1056,
+        "quantity": 1,
+        "notes": ""
+      },
+      {
+        "id": "8c6b1f21-be9d-409e-8757-157fb77ca1e3",
+        "brand": "LUXE Hiking",
+        "name": "3W Folding Wood Stove",
+        "category": "Sleep Systems",
+        "weight": 4.11,
+        "quantity": 1,
+        "notes": "Legacy label: Stove | Base camp gear"
+      },
+      {
+        "id": "9bfc30a0-696b-4989-819e-4abd48568fac",
+        "brand": "LUXE Hiking",
+        "name": "Hexpeak XL Tipi (3p)",
+        "category": "Sleep Systems",
+        "weight": 3.128,
+        "quantity": 1,
+        "notes": "Legacy label: Tent | Base camp gear"
+      },
+      {
+        "id": "66562338-9cd6-4033-8fa1-071ccbfbd0c2",
+        "brand": "ICECO",
+        "name": "Cot",
+        "category": "Sleep Systems",
+        "weight": 0.01,
+        "quantity": 1,
+        "notes": ""
+      },
+      {
+        "id": "008f973b-947a-4e38-803b-200756f0f2a3",
+        "brand": "Sierra Designs",
+        "name": "NITRO QUILT 800 20 Degree",
+        "category": "Sleep Systems",
+        "weight": 1.631,
+        "quantity": 1,
+        "notes": "Legacy label: Sleeping bag | Base camp gear"
+      },
+      {
+        "id": "a4200877-1505-4ec2-afa8-d28a0cf209a6",
+        "brand": "Thermarest",
+        "name": "NeoAir Xlite Ultralight Backpacking Air Mattress",
+        "category": "Sleep Systems",
+        "weight": 0.7937,
+        "quantity": 1,
+        "notes": "Legacy label: Sleep Pad | Marked needed in source sheet"
+      },
+      {
+        "id": "907178cd-e64f-4e86-9ad7-d370bc8884df",
+        "brand": "LUXE Hiking",
+        "name": "Winter Inner",
+        "category": "Sleep Systems",
+        "weight": 1.6875,
+        "quantity": 1,
+        "notes": "Legacy label: Tent - Inner | Base camp gear"
+      },
+      {
+        "id": "97eeafd3-78e6-4d5d-9e10-5ef5a78af65a",
+        "brand": "LUXE Hiking",
+        "name": "Summer Inner",
+        "category": "Sleep Systems",
+        "weight": 1.3,
+        "quantity": 1,
+        "notes": "Legacy label: Tent - Inner | Base camp gear"
+      },
+      {
+        "id": "1d9ff1a4-c278-476c-b36b-6c3af5d1b617",
+        "brand": "LUXE Hiking",
+        "name": "T-45",
+        "category": "Sleep Systems",
+        "weight": 0.1406,
+        "quantity": 1,
+        "notes": "Legacy label: Tent One Trecking Pole Adapter | Base camp gear"
+      },
+      {
+        "id": "9504a1a7-7922-4654-9d49-de422b3ac043",
+        "brand": "Sea to Sumit",
+        "name": "Aeros Premium Pillow",
+        "category": "Sleep Systems",
+        "weight": 0.2269,
+        "quantity": 1,
+        "notes": "Legacy label: Pillow | Base camp gear | Marked needed in source sheet"
+      },
+      {
+        "id": "18bb67ff-3164-4301-9cec-65cda5377c2e",
+        "brand": "LUXE Hiking",
+        "name": "3-Piece Shaft",
+        "category": "Sleep Systems",
+        "weight": 0.39,
+        "quantity": 1,
+        "notes": "Legacy label: Tent Pole | Base camp gear"
+      },
+      {
+        "id": "702ebe43-ff93-4c0b-ab84-f253bb27f0f2",
+        "brand": "LUXE Hiking",
+        "name": "1P Bathroom Floor",
+        "category": "Sleep Systems",
+        "weight": 1.001,
+        "quantity": 1,
+        "notes": "Legacy label: Tent - Bathroom Floor | Base camp gear"
+      },
+      {
+        "id": "70acd11b-7618-45f3-9a2c-a7815119800d",
+        "brand": "LUXE Hiking",
+        "name": "T-32",
+        "category": "Sleep Systems",
+        "weight": 0.1044,
+        "quantity": 1,
+        "notes": "Legacy label: Tent Two Trecking Pole Adapter | Base camp gear"
+      },
+      {
+        "id": "0c93175a-f6bc-44bd-bc51-3a1a6afc636e",
+        "brand": "LUXE Hiking",
+        "name": "Luxe Tent Stakes",
+        "category": "Sleep Systems",
+        "weight": 0.5094,
+        "quantity": 1,
+        "notes": "Legacy label: Tent Stakes | Base camp gear"
+      },
+      {
+        "id": "b5157c5b-17d1-4465-ad5a-0a6a4d013393",
+        "brand": "LUXE Hiking",
+        "name": "(50ft x 2.5mm) Reflective Set",
+        "category": "Sleep Systems",
+        "weight": 0.2644,
+        "quantity": 1,
+        "notes": "Legacy label: Extra Guy Line Cord"
+      },
+      {
+        "id": "0d82d63f-bd5f-4065-8afd-95306d05167f",
+        "brand": "Thermarest",
+        "name": "Questar 0 Degree",
+        "category": "Sleep Systems",
+        "weight": 2.6875,
+        "quantity": 1,
+        "notes": "Legacy label: Sleeping bag | Base camp gear | Marked needed in source sheet"
+      },
+      {
+        "id": "c3fd6375-9d04-49ed-8f99-32d3ea9ae3a5",
+        "brand": "KUIU",
+        "name": "PRO 6000 + Rifle Holder",
+        "category": "Storage",
+        "weight": 5.9437,
+        "quantity": 1,
+        "notes": "Legacy label: Backpack & Frame | Marked needed in source sheet"
+      },
+      {
+        "id": "be94039d-4162-406d-a8b1-bb0b6aa00bb2",
+        "brand": "KUIU",
+        "name": "TAKU 9000",
+        "category": "Storage",
+        "weight": 2.3563,
+        "quantity": 1,
+        "notes": "Legacy label: Travel Bag"
+      },
+      {
+        "id": "1d9f74f1-ab2d-4824-93d5-4881d2e2f817",
+        "brand": "KUIU",
+        "name": "Dry Bag (Size XL)",
+        "category": "Storage",
+        "weight": 0.0625,
+        "quantity": 1,
+        "notes": "Legacy label: Bag | Marked needed in source sheet"
+      },
+      {
+        "id": "43ce782e-bd07-4b9d-9fe1-f924f0f7d1ea",
+        "brand": "KUIU",
+        "name": "Pro Hydration Rig",
+        "category": "Storage",
+        "weight": 0.3125,
+        "quantity": 1,
+        "notes": "Legacy label: Water | Marked needed in source sheet"
+      },
+      {
+        "id": "2a724326-3c8a-455d-9335-3cebb9372bd0",
+        "brand": "KUIU",
+        "name": "Dry Bag (Size L)",
+        "category": "Storage",
+        "weight": 0.0625,
+        "quantity": 1,
+        "notes": "Legacy label: Bag | Marked needed in source sheet"
+      },
+      {
+        "id": "de90bd44-c8b4-4089-894d-271da3ade174",
+        "brand": "KUIU",
+        "name": "Dry Bag (Size M)",
+        "category": "Storage",
+        "weight": 0.0625,
+        "quantity": 1,
+        "notes": "Legacy label: Bag | Marked needed in source sheet"
+      },
+      {
+        "id": "b2587fac-0070-4d85-a60a-84c1c1b61369",
+        "brand": "KUIU",
+        "name": "Dry Bag (Size S)",
+        "category": "Storage",
+        "weight": 0.0625,
+        "quantity": 1,
+        "notes": "Legacy label: Bag | Marked needed in source sheet"
+      },
+      {
+        "id": "6425d208-d790-4255-9fbb-77fafa2b85bf",
+        "brand": "KUIU",
+        "name": "Dry Bag (Size XS)",
+        "category": "Storage",
+        "weight": 0.0625,
+        "quantity": 1,
+        "notes": "Legacy label: Bag | Marked needed in source sheet"
+      }
+    ],
+    "trips": [
+      {
+        "id": "f4f70328-6e52-4ad5-9bf8-8b995871f9ba",
+        "name": "Imported Master Pack",
+        "location": "Imported from Hunting Gear MASTER.xlsx",
+        "startDate": "2026-03-16",
+        "endDate": "2026-03-19",
+        "status": "planning",
+        "bags": [
+          {
+            "id": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "label": "Imported Pack",
+            "maxWeight": 60
+          }
+        ],
+        "assignments": [
+          {
+            "id": "bbc61873-23e7-42a0-8b52-e46ae48c2559",
+            "gearId": "f03f3ef9-a7e9-47d2-b058-12a15b97196f",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "6e74c7a5-efd2-4ed9-b768-290c0deac777",
+            "gearId": "0daa184f-9c61-4d8e-a0ed-ee55a2b0a832",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "c3a51c0e-348c-43fe-bac8-194df01aa21e",
+            "gearId": "8053ec90-22cb-44e3-9026-15914cb6feb0",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "55bc69e2-f62f-4a4e-af3e-773efb26a2eb",
+            "gearId": "530e3544-11ec-4b13-b64d-0fd589acb9b4",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "c3d609e8-94cb-45fc-a6af-b83670e1a4ac",
+            "gearId": "921e4d83-85a6-4fa8-a1c1-675fdf6ee9f6",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "59950dd3-7a4e-4dfa-89aa-63da6aed8ee6",
+            "gearId": "9e756b35-096c-4e87-9b72-bec2f2a90a65",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "44ddc2ad-2a6a-43f8-a645-8b0703c3e5d4",
+            "gearId": "637c2833-ec0c-49a9-85cc-29eda0fc4a98",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "f950c8a9-c93e-4dcb-aaf9-4bf470d62520",
+            "gearId": "974e312a-b08c-4c89-b883-55666c9b1839",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "416f6d3c-cc0f-493e-9d2e-64fa89f3bc47",
+            "gearId": "152bfb87-b58b-4b03-bce2-b1f8803bcb6e",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "cd56a642-e67b-4b5b-a94f-46edda7337e2",
+            "gearId": "ab715ee0-edc8-449e-9b14-28436f18b82c",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "dfa9dfa1-17a1-4046-a8b8-24554be59c91",
+            "gearId": "aacfa488-153c-47c1-a589-e9a4d10d54b9",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "74cc2af9-7df7-495f-a82a-6eac5e7672c3",
+            "gearId": "7a188ec7-7687-4a3a-b536-361f7cdc5835",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "32493eb0-743c-4dbe-a73c-73f8e9b966a3",
+            "gearId": "c1e5e8fa-f551-4112-aec7-3f4e1edc06cf",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "c17fae79-d775-4527-8774-c539a70ce382",
+            "gearId": "5bb1866f-8ce1-4100-97fe-d07895922f39",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "ad2cc1fe-2aa4-44e1-a579-0140590f34d0",
+            "gearId": "f6239ce0-8e51-4e80-a642-73442c5fea22",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "dec44d10-ec17-47d5-aafe-3ea524871870",
+            "gearId": "66e9c7b3-c733-40b2-8ec4-403d1098097c",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "cc6bb604-8bbf-4ec7-9241-3135ae157df4",
+            "gearId": "5bb5d0a0-d2be-4bdc-b27d-528db0c52493",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "cf62b8db-a1c4-44d8-a48b-7d2b8d98bdbe",
+            "gearId": "761dea8b-72c4-4c53-8c72-afd22e2e36f4",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "4f79c098-9528-436c-ae5c-4d3831f1676b",
+            "gearId": "6d17c7e7-bafd-4cf4-8691-3427426c884f",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "ca531b5c-ed79-4665-aa1c-2bae018c84b7",
+            "gearId": "015df5cf-9414-47bc-8267-f7bb04255223",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "d7909b4a-9152-49d6-8811-51cd8e4b6c42",
+            "gearId": "7ea09e27-bc23-49c0-8faf-72a357602aa5",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "8e997c94-885d-4d9e-bc6d-9719300d40b8",
+            "gearId": "cb35bbae-278d-4989-8753-29e6ea83e58c",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "8524742a-3d38-4f85-9a4a-41659b816bb5",
+            "gearId": "542c3ba3-4a38-4186-ab9e-ba97acf7dfe3",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "db6426f0-3ba8-43db-9e41-4b81a2b181e7",
+            "gearId": "dc488bc5-a6bc-4eb9-ad0b-c86fb4b73691",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "b66b5a5d-5116-45f7-84bc-a668bb65dbe7",
+            "gearId": "7b526dbb-7413-45b0-9e63-d5970a3f62d8",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "1c0cdbb5-fcab-435c-a7f3-486dfe0b1433",
+            "gearId": "9160db18-4980-4f79-8f21-7df5020af516",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "afe40510-7587-4d1c-953e-19e4b48cfe1b",
+            "gearId": "420127cb-8b7e-429e-b1ea-040e8b84f49e",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "2e4e7396-3cca-47e6-9033-2bd5a2ee4ef3",
+            "gearId": "029a650b-61d7-4e73-9e2b-b44d6fbaffbc",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "52487109-ea77-40a2-8755-cb47d409d49a",
+            "gearId": "f393b336-e794-4d5b-84bc-790fe73d41ab",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "c75411fc-2d24-49c3-86ad-c4bac8368ea2",
+            "gearId": "d10c7740-2d9c-42eb-9ce3-ea9953f6298d",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "5a510c1f-a242-4bb0-8ddd-16854ce353c4",
+            "gearId": "6820f6c3-5e50-484b-b22c-230f4a922dcb",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "d899f471-ce31-4502-b160-4d3b047952cb",
+            "gearId": "5a557cb8-db29-4052-8576-55af3c5c3c2e",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "2a9aeb3b-7140-4efd-b652-a87853b62102",
+            "gearId": "39eda82a-5862-45e1-9be2-766be9837801",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "3e8740c6-868a-45d7-ab3d-fc6a719d6a26",
+            "gearId": "b57fe7fc-a9ff-46dd-9ae5-e10ef9fe39ce",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "308e4d60-8935-4ea7-8b4d-abfa7b7bcaa0",
+            "gearId": "9f76e860-637e-449d-9933-e23b1fc9cfab",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "7a6d17fb-a8e1-4413-b934-21667931f871",
+            "gearId": "d4a30667-e12b-45d0-b3c5-7b3bba2db70b",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "3ec01a36-06e8-40c4-9f6b-65c425e40b0f",
+            "gearId": "f49170a7-0b5e-4e3b-b0f6-a015a3a002c2",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "45e24a8e-bd40-4895-a77f-8330993d5295",
+            "gearId": "0ddf4201-78fe-4012-b379-256b7d613cfc",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "186d1aa7-9bae-4f22-b555-d1311b635129",
+            "gearId": "a33b5e73-3c80-44ee-8918-6c630f112ca6",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "30e953d0-75b3-48a6-b078-3ddf32abcba0",
+            "gearId": "64b6e074-81c0-40f6-bc0f-97b98b3d4eba",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "e9705e20-024b-4c01-9709-5f68d025c247",
+            "gearId": "cceec85d-cd05-4187-9c5e-4eabb75f316a",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "aafb9534-3088-4d4d-826d-ce781c21f48c",
+            "gearId": "c6378e57-cbae-442d-b02a-f5494f83c47a",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "87d75646-28f4-4feb-bb77-15c211fd5436",
+            "gearId": "4ee82433-83cb-4a22-9e61-820c537b2af8",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "39eea3ed-e3c2-4d3c-abdb-83baf6febc65",
+            "gearId": "4e54e8c2-c963-4733-8531-0524eb027606",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "2ece1a9c-9757-4282-a127-3f7d558d3778",
+            "gearId": "f4bb8141-1d24-4918-8e3e-e4a9cd44b094",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "48d48100-49e1-47cc-a007-bde959a085ba",
+            "gearId": "54cd6575-787a-4f5a-8fe9-c866ff34db98",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "a3d21eef-7e0c-45f8-adaa-41477131879f",
+            "gearId": "46368a8a-f9a6-4d60-a9b2-d0cd6daf8813",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "aecde7de-ebaf-4d42-8c14-bd604a478785",
+            "gearId": "f5416451-4c37-4a11-9535-32e0007ffe36",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "825e419c-108f-46c6-9ec7-965f245de080",
+            "gearId": "a4200877-1505-4ec2-afa8-d28a0cf209a6",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "6a613666-5dea-441b-bf01-ed11bfcd8cac",
+            "gearId": "9504a1a7-7922-4654-9d49-de422b3ac043",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "07e02785-d339-48aa-b120-3d41be69ed96",
+            "gearId": "0d82d63f-bd5f-4065-8afd-95306d05167f",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "fcd90c35-7b30-4dec-97d3-b28f9f878b94",
+            "gearId": "c3fd6375-9d04-49ed-8f99-32d3ea9ae3a5",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "734f1e47-1e6a-4f8b-9368-6d0736b785f3",
+            "gearId": "be94039d-4162-406d-a8b1-bb0b6aa00bb2",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "5d21ae50-fc42-4e05-9f3f-eba28d97fe4f",
+            "gearId": "1d9f74f1-ab2d-4824-93d5-4881d2e2f817",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "736db713-3016-4df6-907f-46c33f4ee753",
+            "gearId": "43ce782e-bd07-4b9d-9fe1-f924f0f7d1ea",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "609653ee-07da-4160-96a0-c28ff0b0e9f4",
+            "gearId": "2a724326-3c8a-455d-9335-3cebb9372bd0",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "23d2f64a-3f78-45ba-a26e-39e021d0079e",
+            "gearId": "de90bd44-c8b4-4089-894d-271da3ade174",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "12b13e95-93f7-4765-a466-7edb8222385e",
+            "gearId": "b2587fac-0070-4d85-a60a-84c1c1b61369",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          },
+          {
+            "id": "9134d1b0-e9cc-4721-965a-2aa2ad88eef1",
+            "gearId": "6425d208-d790-4255-9fbb-77fafa2b85bf",
+            "bagId": "9efbf993-c538-42c8-a097-2dbaa0a234b3",
+            "quantity": 1,
+            "status": "packed",
+            "essential": true,
+            "note": "Imported as packed from spreadsheet"
+          }
+        ]
+      }
+    ]
+  }
+}
