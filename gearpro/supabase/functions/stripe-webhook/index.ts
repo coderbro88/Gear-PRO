@@ -1,22 +1,14 @@
 import Stripe from 'npm:stripe@17.5.0';
-import { createClient } from 'jsr:@supabase/supabase-js@2';
+import { sendEmail, donationThankYouHtml, donationThankYouSubject } from '../_shared/email.ts';
 
 // Stripe calls this server-to-server -- no browser involved, so no CORS needed.
 // verify_jwt must be OFF for this function (Stripe doesn't send a Supabase JWT);
 // the Stripe-Signature check below is what authenticates the caller instead.
+//
+// GearPro is free -- the only Stripe flow is stripe-donate's one-time "support
+// the app" payment, so this only needs to handle checkout.session.completed.
 const stripe = new Stripe(Deno.env.get('STRIPE_SECRET_KEY')!);
 const cryptoProvider = Stripe.createSubtleCryptoProvider();
-
-const admin = createClient(Deno.env.get('SUPABASE_URL')!, Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!);
-
-async function userIdForCustomer(customerId: string): Promise<string | null> {
-  const { data } = await admin
-    .from('user_profiles')
-    .select('user_id')
-    .eq('stripe_customer_id', customerId)
-    .maybeSingle();
-  return data?.user_id ?? null;
-}
 
 Deno.serve(async (req) => {
   const signature = req.headers.get('Stripe-Signature');
@@ -36,37 +28,21 @@ Deno.serve(async (req) => {
     return new Response(`Webhook signature verification failed: ${message}`, { status: 400 });
   }
 
-  switch (event.type) {
-    case 'checkout.session.completed': {
-      const session = event.data.object as Stripe.Checkout.Session;
-      const customerId = session.customer as string;
-      const userId = await userIdForCustomer(customerId);
-      if (userId) {
-        await admin.from('user_access_grants').insert({
-          user_id: userId,
-          source: 'stripe',
-          plan_type: 'subscription',
-          status: 'active',
-        });
-      }
-      break;
+  if (event.type === 'checkout.session.completed') {
+    const session = event.data.object as Stripe.Checkout.Session;
+    const donorEmail = session.customer_details?.email ?? session.customer_email;
+    if (donorEmail && session.amount_total != null) {
+      const amountFormatted = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: session.currency ?? 'usd',
+      }).format(session.amount_total / 100);
+      void sendEmail({
+        to: donorEmail,
+        bcc: 'austin@hevelgroup.com',
+        subject: donationThankYouSubject(),
+        html: donationThankYouHtml(amountFormatted),
+      });
     }
-    case 'customer.subscription.deleted': {
-      const subscription = event.data.object as Stripe.Subscription;
-      const customerId = subscription.customer as string;
-      const userId = await userIdForCustomer(customerId);
-      if (userId) {
-        await admin
-          .from('user_access_grants')
-          .update({ status: 'revoked', ends_at: new Date().toISOString() })
-          .eq('user_id', userId)
-          .eq('source', 'stripe')
-          .eq('status', 'active');
-      }
-      break;
-    }
-    default:
-      break;
   }
 
   return new Response(JSON.stringify({ received: true }), { headers: { 'Content-Type': 'application/json' } });

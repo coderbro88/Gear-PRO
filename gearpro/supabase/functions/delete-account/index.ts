@@ -1,6 +1,7 @@
 import Stripe from 'npm:stripe@17.5.0';
 import { createClient } from 'jsr:@supabase/supabase-js@2';
 import { corsHeaders } from '../_shared/cors.ts';
+import { accountDeletedHtml, accountDeletedSubject, sendEmail } from '../_shared/email.ts';
 
 const stripe = new Stripe(Deno.env.get('STRIPE_SECRET_KEY')!);
 
@@ -21,6 +22,7 @@ Deno.serve(async (req) => {
     const { data: userData, error: userError } = await admin.auth.getUser(token);
     if (userError || !userData.user) throw new Error('Not authenticated');
     const userId = userData.user.id;
+    const userEmail = userData.user.email;
 
     // Cancel any active Stripe subscription first -- once user_profiles is
     // deleted below, the stripe_customer_id link is gone, and a still-active
@@ -54,6 +56,15 @@ Deno.serve(async (req) => {
 
     const { error: deleteUserError } = await admin.auth.admin.deleteUser(userId);
     if (deleteUserError) throw deleteUserError;
+
+    if (userEmail) {
+      void sendEmail({
+        to: userEmail,
+        bcc: 'austin@hevelgroup.com',
+        subject: accountDeletedSubject(),
+        html: accountDeletedHtml(),
+      });
+    }
 
     return new Response(JSON.stringify({ success: true }), {
       headers: { ...headers, 'Content-Type': 'application/json' },
